@@ -1,21 +1,21 @@
 <div class="box">
   <h1>Show</h1>
   <% case @property.properties_type %>
-    <% when 'appartement' %>
-    <p> Un <strong>Appartement</strong> </p>
+    <% when 'apartment' %>
+    <p> An <strong>apartment</strong> </p>
       <% case @property.floor %>
         <% when 0..2 %>
-        <p>Ca va, tu ne risques pas de te fatiguer avec que <strong> <%= pluralize(@property.floor, "étage") %> </strong> à monter</p>
+        <p>It's okay, you're not going to get tired with that <strong> <%= pluralize(@property.floor, "floor") %> </strong> to be raised</p>
         <% when 3..5 %>
-        <p>Pas de problèmes, ça se monte sans difficultés <strong><%= @property.floor %> étages</strong> </p>
+        <p>No problem, it can be set up without difficulty <strong><%= @property.floor %> floors</strong> </p>
         <% when 6..8 %>
-        <p>Ca commence à faire pas mal <%= @property.floor %> étages</p>
+        <p>It's starting to hurt a lot <%= @property.floor %> floors</p>
         <% when 9..10 %>
-        <p>Alors là, respect ! <strong><%= @property.floor %> étages</strong> </p>
+        <p>Now, respect ! <strong><%= @property.floor %> floors</strong> </p>
       <%end  %>
-    <% when 'maison' %>
-    <p> Une <strong>maison</strong></p>
+    <% when 'house' %>
+    <p> Une <strong>house</strong></p>
     <% else %>
-    <p> On avait demandé un appartement ou une maison, <strong>patate !</strong></p>
+    <p> We had asked for an apartment or a house, <strong>potato !</strong></p>
   <% end %>
 </div>

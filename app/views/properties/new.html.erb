@@ -1,10 +1,10 @@
 <div class="box">
-  <h1>Masquer une Div en fonction d’un champ en Javascript et CSS</h1>
+  <h1>Hide a Div according to a field in Javascript and CSS</h1>
   <%= simple_form_for @property, method: :post do |f| %>
-  <%= f.input :properties_type, placeholder: "Entrez votre type d'habitation", label: 'Appartement ou maison' %>
+  <%= f.input :properties_type, placeholder: "Enter your housing type", label: 'Apartment or house' %>
   <div id="hide_floor">
-    <%= f.input :floor, collection: 0..10, selected: 0, placeholder: "N° étage", label: "Si c'est un appartement, Quel étage ?" %>
+    <%= f.input :floor, collection: 0..10, selected: 0, placeholder: "Floor number", label: "If it's an apartment, what floor ?" %>
   </div>
-  <%= f.button :submit, 'Ajouter', class: "btn btn-primary" %>
+  <%= f.button :submit, 'Add', class: "btn btn-primary" %>
   <% end %>
 </div>
